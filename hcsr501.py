@@ -13,7 +13,7 @@ GPIO.setup(PIN, GPIO.IN)
 
 
 try:
-	import .settings_local.py
+	import settings_local
 except:
 	print "No local settings"
 	BOT = ""
