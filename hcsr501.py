@@ -13,9 +13,10 @@ GPIO.setup(PIN, GPIO.IN)
 
 
 try:
-	import settings_local
+	from settings_local import *
+        print "Local settings import success!"
 except:
-	print "No local settings"
+	print "No local settings!"
 	BOT = ""
 	CHAT_ID = ""
 
