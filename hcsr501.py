@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # HC-SR501 motion sensor
+# Raspberry Pi 3+ testing
 
 import requests
 import RPi.GPIO as GPIO
