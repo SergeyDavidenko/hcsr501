@@ -5,6 +5,7 @@
 import requests
 import RPi.GPIO as GPIO
 import time
+import pygame
 
 
 GPIO.setmode(GPIO.BOARD)
@@ -34,5 +35,8 @@ while True:
    if GPIO.input(PIN):
       print "Movement detected! " + (time.strftime("%H:%M:%S"))
       send_telegram("Movement detected! " + (time.strftime("%H:%M:%S")))
-      time.sleep(5)
+      pygame.mixer.init()
+      pygame.mixer.music.load("sound/Wake-up-sounds.mp3")
+      pygame.mixer.music.play()
+      time.sleep(60)
    time.sleep(1)
